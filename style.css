@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    scroll-behavior: smooth;
+    font-family: montserrat;
+    color: #111;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    all: unset;
+    display: flex;
+    justify-content: center;
+    background-color: #f5f5f5;
+}
+
+.main-wrapper {
+    position: absolute;
+    width: 45rem;
+}
+
+.section {
+    position: relative;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.header-wrapper > * {
+    margin: 0;
+}
+
+.header-wrapper > p:first-of-type {
+    width: 50%;
+}
+
+.header-wrapper::before {
+    content: '';
+    position: absolute;
+    border-radius: inherit;
+    width: 30rem;
+    aspect-ratio: 1 / 1;
+    filter: blur(30rem);
+    border-radius: 100%;
+    background-color: #174ae4;
+    opacity: 1;
+    z-index: -1;
+}
+
+.apps {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.header > p:last-child {
+    position: absolute;
+    bottom: 1rem;
+}
+
+.header > p:last-child::before {
+    content: url("mouse.svg");
+    fill: black;
+}
+
+.scroll > a {
+    all: unset;
+    cursor: pointer;
+}
+
+.overview:not(p) {
+    display: flex;
+    gap: 5rem;
+}
+
+.overview-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.logo {
+    position: relative;
+    left: 0.5rem;
+}
+
+.logo::before {
+    content: url(fractial.svg);
+    position: relative;
+    top: 0.5rem;
+    right: 0.5rem;
+}
+
+.dot::after {
+    content: '.';
+    color: #174ae4;
+}
+
+.overview > div > p:first-of-type,
+.overview-wrapper > * {
+    margin: 0;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.option {
+    position: relative;
+    width: 15rem;
+    aspect-ratio: 1 / 1.25;
+    padding: 1rem;
+    border-radius: 2rem;
+    transform: perspective(5000px) 
+    rotateY(var(--rotateY)) 
+    rotateX(var(--rotateX));
+    transform-style: preserve-3d;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+    background-color: white;
+    transition: transform 0.3s ease;
+}
+
+.option::before {
+    content: '';
+    position: absolute;
+    border-radius: inherit;
+    inset: 0.75rem;
+    background-color: black;
+    transform: translateZ(-50px);
+    filter: blur(15px);
+    opacity: 0.75;
+    z-index: -1;
+}
+
+.option > .icon {
+    width: 3.5rem;
+    aspect-ratio: 1 / 1;
+    border-radius: 100%;
+    background-color: #111;
+}
+
+.footer {
+    position: relative;
+    height: 10dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 1.5rem 1.5rem 0 0;
+    background: linear-gradient(to right, #54a1f4, #174ae4);
+    color: white;
+    text-align: center;
+}
