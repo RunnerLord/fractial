@@ -99,7 +99,7 @@ body {
 }
 
 .logo::before {
-    content: url(fractial.svg);
+    content: url(https://raw.githubusercontent.com/RunnerLord/fractial/main/fractial.svg);
     position: relative;
     top: 0.5rem;
     right: 0.5rem;
