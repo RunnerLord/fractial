@@ -1,4 +1,4 @@
-const elements = document.querySelectorAll(".option");
+/*const elements = document.querySelectorAll(".option");
 
 elements.forEach((element) => {
   let animationAdded = false;
@@ -38,4 +38,4 @@ function rotateElement(event, element) {
 
 function resetRotation(element) {
   element.style.transform = "rotateX(0deg) rotateY(0deg)";
-}
+}*/
